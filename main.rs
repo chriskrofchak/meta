@@ -1,7 +1,5 @@
 // EXAMPLES FOR PIPE AND COMP
-
 mod pipe;
-use pipe::pipe;
 
 fn k_n(k: u32) -> Box<dyn Fn(u32) -> u32> {
     Box::new(move |x| k*x)
@@ -25,6 +23,4 @@ fn main() {
 
     assert_eq!(nested_1(1), 36);
     assert_eq!(piped_1(1), 36);
-
-    println!("{} vs. {}", nested_1(1), piped_1(1));
 }
